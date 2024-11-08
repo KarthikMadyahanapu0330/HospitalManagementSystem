@@ -1,0 +1,83 @@
+.makingcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.makingcentercolumn {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('https://img.freepik.com/premium-photo/defocus-effect-modern-business-office-background_798782-673.jpg?w=900');
+    background-size: cover;
+    padding: 20px;
+}
+
+.centerdiv {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 20px;
+    max-width: 400px; 
+    width: 90%; 
+    background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.logoapp h1 {
+    font-family: cursive;
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px; 
+}
+
+.logoapp {
+    padding: 20px;
+    text-align: center;
+    color: aqua;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input {
+    text-align: center;
+    height: 40px;
+    width: 100%; 
+    margin: 10px 0;
+    border-radius: 10px;
+    border-color: black;
+    box-sizing: border-box;
+}
+
+input:hover {
+    background-color: #7FC7D9;
+    color: black;
+}
+
+button {
+    height: 40px;
+    width: 100%; 
+    color: rgb(198, 129, 2);
+    background-color: #0C2D57;
+    border-radius: 5px;
+    font-family: cursive;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(217, 217, 239);
+    color: blue;
+}
+
+.anchortags {
+    padding: 10px;
+    text-align: center;
+}
+
+.anchortags p {
+    margin: 5px 0;
+}

@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Doctorlogin</title>
+	<link rel="stylesheet"
+		href="{% static 'css/doctorlogin.css' %}">
+</head>
+
+<body>
+	<form action="{% url 'doctor_dashboard'%}" method="post">
+		{% csrf_token %}
+	<div class="main">
+		<h1>DoctorLogin</h1>
+		<h3>Enter your login credentials</h3>
+		<form action="">
+			<label for="first">
+				Email
+			</label>
+			<input type="text"
+				id="first"
+				name="first"
+				placeholder="Enter your Email address">
+
+			<label for="password">
+				Password
+			</label>
+			<input type="password"
+				id="password"
+				name="password"
+				placeholder="Enter your Password">
+
+			<div class="wrap">
+				<button type="submit">Login</button>
+			</div>
+		</form>
+		<a href=Forgotpassword?>Forget password?</a> 
+			<a href="{% url 'doctor_signup'%}">
+				signup
+			</a>
+		</p>
+	</div>
+</form> 
+</body>
+
+</html>

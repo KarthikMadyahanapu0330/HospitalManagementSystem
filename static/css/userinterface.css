@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.main-heading{
+    font-family: 'Roboto';
+    font-size: 42px; 
+    text-align: center; 
+    font-weight: 800;
+    color:#272343;
+    background-color:#e3f6f5;
+    padding:5px;
+    margin:0px;
+}
+.why-choose-us-background{
+  background-color: #a2c11c;
+  }
+.why-choose-us-heading{
+  font-family: 'Roboto';
+  font-size:36px;
+  font-weight:600;
+  text-align: center;
+}
+.why-choose-us-description{
+  font-size: 18px;
+  font-family: "Roboto"; 
+  text-align: justify;
+}
+.card-img{
+  width:40px;
+}
+.wcu-card{
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+.card-heading{
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: bold;
+  color: #272343;
+}
+.card-paragraph{
+  font-family: "Roboto";
+  font-size: 14px;
+  text-align: justify;
+  color: #272343;
+}
+.comp-med-ser-background{
+  background-color: #7dd87d;
+  padding: 10px;
+}
+.comp-med-ser-heading{
+  font-family: "Roboto"; 
+  font-size: 36px;
+  color: #5b446a;
+  font-weight: 800; 
+  text-align: center;
+}
+.comp-med-ser-para{
+  font-family: "roboto"; 
+  font-size: 18px; 
+  text-align: center;
+  color: #272343;
+}
+.comp-med-ser-card{
+  background-color: #e8ecd6;
+  border-radius: 10px;
+}
+.card-title{
+  color:#084d68;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: bold;
+
+}
+.cms-card-img{
+  width:80vh;
+  height:30vh;
+}
+.description{
+  font-family: "Roboto"; 
+  font-size: 16px; 
+  color: #272343; 
+  text-align: justify;
+}
+.footer-background{
+  height:30vh;
+  background-color: #596e79;
+}
+.icon-container{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    background-color: #152c3e;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.icon {
+  color: #5a7184;
+  font-size: 24px;
+}
+.contact-us-heading{
+  font-family: "Roboto";
+  font-size: 36px;
+  font-weight: 600; 
+  color: #c7b198;
+}
+.footer-inner-card{
+height:20vh
+}

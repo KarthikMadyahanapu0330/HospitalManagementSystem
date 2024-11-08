@@ -1,0 +1,100 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Booking</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2566.jpg?w=900&t=st=1710495967~exp=1710496567~hmac=aac348b9fe3f961f7420e9fc36bd344d2fa41ed10f6e1f98fb8ab2d6c7728e93");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    .container {
+      width: 100%;
+      margin: 10px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7); /* Added background color with opacity */
+      border-radius: 10px;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .btn-success {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+    p{
+      font: x-large;
+      font-family: 'Franklin Gothic Medium';
+      color: brown;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div class="container mt-5">
+      <h2 class="mb-4" style="font-weight: bold;">Slot Booking</h2>
+      <form method="post" onsubmit="return validate()">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required name="name">
+        </div>
+        <div class="form-group"> 
+          <label for="age">Age:</label>
+          <input type="number" class="form-control" id="age" placeholder="Enter your age" required name="age">
+        </div>
+        <div class="form-group">
+          <label for="mbno">Mobile Number:</label>
+          <input type="tel" class="form-control" id="mbno" placeholder="Enter your mobile number" required name="mobile">
+        </div>
+        <div class="form-group">
+          <label for="date">Choose Date:</label>
+          <input type="date" class="form-control" id="date" required name="date" min="{{today}}">
+        </div>
+        <div class="form-group">
+          <label for="timeslot">Select Time Slot:</label>
+          <select class="form-control" id="timeslot" required name="timeslot">
+            <option value="">Select Time Slot</option>
+            <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+            <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+            <option value="01:00 PM - 02:00 PM">01:00 PM - 02:00 PM</option>
+            <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+            <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+            <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select class="form-control" id="gender" required name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Other</option>
+          </select>
+        </div>
+        <div class="form-group text-center">
+          <P> {{msg}}</P>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="{% static 'js/slot.js' %}"></script>
+</body>
+</html>

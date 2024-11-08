@@ -1,0 +1,77 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{
+        background-image: url('https://res.cloudinary.com/dic4za1oc/image/upload/v1709716568/empty-corridor-modern-hospital-blurred-260nw-1564046407_c7nect.jpg');
+        background-size: cover;        
+    }
+    .form-group input[type=button]{
+        justify-content:centre;
+
+    }
+    p{
+      text-align: center;
+      color: brown;
+      font-size: x-large;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Blood Donation Form</h2>
+    <form action="" method="post" onsubmit="return validate()">
+      {%csrf_token%}
+      <div class="form-group">
+        <label for="donorName">Donor Name</label>
+        <input type="text" class="form-control" id="donorName" placeholder="Enter donor name" name="donorName">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="dateOfBirth">Date of Donation</label>
+          <input type="date" class="form-control" id="date" name="dateofdonation">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="gender">Gender</label>
+          <select class="form-control" id="gender" name="gender">
+            <option selected>Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactInfo">Age</label>
+        <input type="text" class="form-control" id="age" placeholder="Enter Age" name="age">
+      </div>
+      <div class="form-group">
+        <label for="contactInfo">Contact Information</label>
+        <input type="text" class="form-control" id="mbno" placeholder="Enter contact information" name="contactInfo">
+      </div>
+      <div class="form-group">
+        <label for="group">Blood Type</label>
+        <select class="form-control" id="group" name="group">
+          <option selected>Select Blood Group</option>
+          <option>O+</option>
+          <option>O-</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+        </select>
+    </div>
+      <p>{{msg}}</p>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script src="{% static 'js/slot.js'%}"></script>
+</body>
+</html>

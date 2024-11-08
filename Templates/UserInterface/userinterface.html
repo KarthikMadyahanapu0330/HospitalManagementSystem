@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/da3000c1ef.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/userinterface.css'%}">
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Hospital Management System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> 
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'patient_login'%}"><button class="btn btn-primary">Patient Login</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'doctor_login'%}"><button class="btn btn-success">Doctor Login</button></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+   
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.pexels.com/photos/2280568/pexels-photo-2280568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+        <div class="p-3 why-choose-us-background">
+          <div class="container">
+            <div class="row">
+                <div class="col-12">
+                  <h1 class="why-choose-us-heading">Why Choose Us</h1>
+                  <p class="why-choose-us-description">Choose us for seamless hospital management solutions tailored to your needs. With our cutting-edge technology and dedicated support, streamline operations and enhance patient care effortlessly. Trust our expertise to optimize efficiency and elevate your healthcare services</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="shadow p-3 text-center mb-3 wcu-card">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAACGCAMAAAARpzrEAAAA8FBMVEX///+PxEJWOh1TNhdMLACFvyeKwjXM47JRMxFtVDtJJgBFIACLwjhPLgBEHgCLfHDw7uxSMwliRii3raSSykTSysTTz8tVNhyUx0imm5FHJADV6L2/3ZlKKADD359TMRvh7s6KeGhSLRrm4t14kDOdj4NxXUvn5eOBcWO32Il9aVXD3qSDqTtjXCbo89m/tq+p0XDo89hmZiidzFl9vAmThHaLuj+GsT2v1Hvy+Or49/e8s6xeQiRRKBmn0G1fUSN+nTc9EABwfi5scyw6CQBlYSeZyVM4AACupJp7mDUwAABnTjJaRB9zhTBueCxgVSM7IaI2AAAVR0lEQVR4nO2d+0PaOhTHS1uglseK8pAK8hqguIFTUUF8bE4v9+Lu/v//5vack6Tpy6uisrF+f1BI05R+mp6cJKeposSKFStWrFixYsWKFStWrFixYsWKFSvWb6/U9pOUTa/6h66ZkoknKRVzf139odyTk1X/gCDjIvtXXF/u6eTVin9BkPvpx6Prh4fru283iWIE93J1sNhcDKplKa20BeqEJmxxXYxEhhF+lwoYbcnqKFt+lZT+3JPw8rNOJZLNl+/9GvJxL366u2xUHKmVRrtxexrGfbRp64amaYZub45Eas/Udd3sudnqznc9X4WPeV3IznUt3LxwttcL0i9Z1N1cev5CyeleZcZK6auckH/xSZ9nE4njF+/9KvJwLyaOLiuqq0ajGOA+HWQ0kUGzB1OWvsDUvMXzlUz4bozhc04qU83lSpC24eTXNqVfsqFJmfSRMlO9MrpKqe4p6KXnnE45Z5QcvnT3V5HMvXg2a3hOtfEtwN2aGV4aM0aa2ObmvOA9zGcM3G3iYn0F+7Q67k085+z+C3d/HSVl7BVW2StoaVS1HbDvU4ZdK+gF4mSoVOPzjA4rd0rftQV84dwNHffRZkokd7+doVK4nalTKUvZmSY75dTLdn8lyfV9RtgblYe7o7vrSsOt7oL7wCAOve682yPyVKWnGUJrs7Z2i4ipaMGBuzaYWp3ShsEzhXOfXVCTOWft6kUBdu1dULuK3I3xUu0qx75iQ+NyL96ikak0bs+KoLMflYAfObKR9AZ5JR1GERrXjs2qdIvKnTGrgZUyJy4P0dXnEdw9CShbKpO410vLnO+OOOHUzjLlLCuX+9klYlc/8Uoe4r8bru1AbZLdcD6VTWZL8mh2yuwyqBn4KnEf6Sq1tqvhXnPPN1tbopylJX5H8QitTPtMxu3jXkKaGddJp1puOyRGvMnT0Scf89bXhswSd2YqVsT9KkWncwzcD19ezvJyr38bbfu3UOyMO9JkAEkDqPCFrqJcMHvO7gbAhfeCCfZe4j6Hz3r1bbmnw03IZDtLZ3N4hfCfgOfNxLkXb5B7+zQUO+OOZkUfSbuj2QDUVfRZNtntALVfQ48eKbncO9BOqvVRZLs6r6K6PDXI3fhAWarR/JP3YanNlLDs+Gn7hcheRYL7R2hVK9fh1Z1xzwjLwUWGps5uhcVcRz8bGep4C6DZQX9mozTaGpt4E9jT//Mjv/PuWJA79yMz1ahz2s2mdoOpaffWJu6hF+e9JLj/QO63j3LPi5aSy8owpwUcTK3XB0ym0oeMNl4m7EjhvaDVdZ2sfh2IPd5vyj/CnTckkdwdqsHhlwOBPZs+R3uz0qGx1+IORsUxJeA+1ktVHWHlWBPq66/qaHHejjvaEz94F3siNfkFOqzPsjN20M6g++j02AvEGJpNbQBdfLOEzQGadZe75nR0yXZHcK+T/nqEe4Gy5KO4H6AVSXra1h3Jf9wlM5M9WBreEhK/59MT2lW3peRCG65t0K3g1MAO1H+N2XxwdmAb565p2mxjzC5bRLtaLpF4apB7ocqyyNdflmNFtgG8ZOMnUrc8pWzT/+ay7JaRz4+MMjTEvWvIFEDU/azSMIG+xYclyb60IDsMFNA4Qb/T6ViePd/Gj3ScxGNw0FOug36Vdc/kYEh+TfKZpF5Xbr/plvpNN8/pN1G31C6TXwMeJh+XgSGYboFsv+y/C70d92PoiwLo7DabzWtK1T2rHOJFyK52xkkaJ8AKrzZu+ARf8dTPnY0TbPJaa+EoDMDCYQIgYrHxMajm4FViC/m+3B2u2TSxZeAPpeq+w2zOaodn5HGxf2nwvX30CYGf/Xt56uc+osmMWQmavWmJhmdgmACJYN+0R244NJ7YqYJm+H25Q10/PGDgfSfp1PJ9ugirHQb2jANf0zhwpa3+vPv80G40bgPjwD2q8eZma9xa2IR4T2Htq91XGGyyReJiRHFXZ9UuqRySgArpr+6xLF0lXOCuJIdEFwdhhilxiqkJr+4hPav3lMz99IFP8vF5j8D8qqVRu6kZhsHmPRZQ93HYBZ1unPDAmQ3X+ERyVwuk/EVIAiqsv0pZ9EzEKQHZbC3NWs+hNEDgNKq/SHX3zq+eXnvn+VzvRszz9X3zfPoCjT0OE9AEEPRcabpPNLbR3Hkpo5AEVHS/KXqeD50Z5Z4q/L7EPXvMPcqVx6X44gm+VSTylfaDv747NX5QdwEZ9RZ1cHAeikDAmBi5PNjGwhzHO3NvYoUf0qltS3YmNWEe5YqdGSUYx3F2+9DAQI5Ko3L9MRHk7oDt5XTHyhiGXujxNm7TNk1bo892ocBmRv4xTTPvOPJfnf+Znue4uIfQ14uQBNRfUAS/ZKXvppwn8qQAbpJZlJR7ks5JcI9ySWrLKxC3VDy9+Xb3+fPd7cdPkXFLna3xYDAYX0iOPIpt7XT6UmrHu9W7B5cVkuApAmV580Se1CSFBgZ/OYw6MpNzrvCu6mpjOEBhcXpMctrK7eHzBMMxyQnYF4CtUC/KuQLsFmiu+vetbVwqjI3dQ4ASMsbGNDvhkTPNFf840JpyV3ayMPmxn8rit2Oq5Hgm929uZIa13UdV21lf7srwKpVsKlc02NtMOp47DFRm3yOKYCeZfVTJ2hpzV5Qv+27Vvnfc+F0Hx/l7xL3vpB6HmfVwP0WFf+PcLY+kiSf8rvi+uwlTyy9/Fn+ByrRfmlfnW2W51GA2qWD/r3FSrCHfMIT51ePa+zxt8DzuH9uO0375ib4UP4MT3/CPz9QLkvLuAFU573y3pWj2Ra5QyM3E11Gm4NVXy5vF+uokmu4MkjXvmXVdz+lmbjCX0M9gpw33eynPS5xtfBC/p6WzREMqNf1uzuOzuNNEX1twh/GZAHdd7i+aLnec4ZDiyPyDiyNPR9NRxvJmsdh8FdOcRbBin1g3xIFovD/v9htKPExN1TQjM+hLP0d0fSPnv99Kr8/dM0HtDsiyoNSM25N5NveMRMjq1TVPZhGxw4K7x6Jg78iBYRD4NeWukWzBfU73gcTDz93GPdy9849w76gcG9tB3EcWC/Y2hS0XETW0i0EmiLizn1lfF+6zHmlDVG8e/OuGePi4lzZwB5ydon2juU8ZbkPPzRZq3QheXxaDiQXjiHx3tDWm30C3HJk99jN7SzwH9TK9DXf/wKIU/KuLUwydPMLJEbMTlkXizkPsB6NO3+qXuzO32RD3gUhyZ6BozlHHAWjkHjU8//Z6L+57gocgHc3d/h/upQxZGFHJLXFbuY2omFqXZv6wdOMDfGy5swGr0DtxJ6uLARz8aY8luNOcba4fcj54J2yqAq/i4V5Gk4ND9b8j9+Kzuc8JZ06VZiiey33KuZexupsjJSg2jYJBPDZrSSTuFNSEk66/H/fG32eo05+R3LWB1Sexw2BruUFTfbxlfSJ3dZOVhfF+wL3KA7uDwk2ZPrYmvCWRuOPdUMcLhtxN/jOnYYW9pV7AXW20UTTbF+7PaN75HrS6+ohqqs6eo3wqd5WVhe4gcMcwED3UBSnQ9UXviZeN3PULp/1t6a5HRX4kK/qvqHi+N9NLuHv0eL9Jp6NgPQOPGiyzxjr+T+buKdDhjk+thobI4PWF+kx2jVoS1m/SCiahJl/d02+y15M7Wl3sMWGIHnO2X8wdnwcxw6bw8JEeUxyRWhJvf9Xco6y/IfcK02PcDZKNSVVR+6Y490+n/mTurCyDc98MhBwz4bMM1CPec1sSmbtm8J4pcWcl538H7pWfd6SHaO6beyTya/DhYQ3aLwttcwZHD5/MnZWFKIE7fiiEhIJ18amdERwIbyxqSYg73TkLMW6J3A3+M8Nc0jfVS/zIMzap/VQ/kvVldHgSgML2kMeL/UiKJw4JjaFbDZ85QFtELQmNE1TpdhGt8e/nRz673zTwho+pbIWCF/eb0Jyo+ti3a3BEk2wb8yNH4jla1Ppz72f8OGhY/uX9VbqQ5ty3by/QCmNLwv33Md0mrOz1546tqmgcMVQVt7+ce4euZH3MzPJ0NBepnuNgSyL6TbhUgrZJfaS15K714IEZ0JQPDH9gTVgL20pY+4c6ozwja/CexF2Z0+imYexVL0Zb4w2zPmWPjvCW0mkrDdaSCO4WGn2DggGRe9139PfTG42/8/7q9xJZXWlCR3ynoXZfsOPTuCstZsrx+WCnakMyJGnSqlgma0nccQIax6SGwdNf/bou8x5czumS5yg5yMijEBHc+0TuSstWPaoHri8NBpkleXxmjse2wSqt6Tyf4I6tqiZN7xMPh8NS3JV5zuMlZbYC1xcHx5yWRH7yhlpkcGp+L+7BOI62n7tpSMqXu3XotsqLEZbzToreUxa6lJHPS1/YcvcRshTcOA5nkxvH0WnVdWw8YdU+o1vCUj2DlEbBSfpq4ZYMcZ/O4KAFs6O05KObvzj3m7ujo6O7M/bt3yP45ufe+iBpr0P/POOsLUrqejIyv7q0B1949xGzcD99Cps+SKPunereZkHPzTZaW5YywmI8gwcXVHAHi+QB4FiIU+ZcPvqHsLH8N9Xz4pa8wde+UOxVxOnB+Ln17oPnr6DncX9Uv2N85MoUc1+NYu6r0Uu4FxMwu+pdDDuEu9Xv9N+sHzh9y8LfQc/nXjz9dj1T1Yfr25tE9PNN/flgoRrqYlB1h7ZHe61WayC1gt0WiH8bwJeq49G0vBqwTe6EqjXa25gZ2mav60469dnukQf7tfRs7sW/Hxo401SpNB4+ylsk7tOuwX1r3Rjzelk10Z92Dz4AH9rk38A91/eULdvw6jttqouJjq3NugGBlJpWqA+4q9/JU39BiTrYr6WdZOpR+Z/3KP5ou6thiy6Uj3t5Uw7Gzs0YDAqykLm7TxIrtCKc0RKrpAjlacUgPsHkeShZNXLsNqDV49zoDly8L/PLcp80/0cTL3dacolz9yx5JbiXct6BcE2n7syrcLc2fbMoNosQtr09/l+c+1Mkr4eN63FU2io8sS0ix7zcO2xFa5jXYx/raA2exn0OT26bbFU9+PiPzH26YNHUOi9ctbHG88WH+djOenE/hQWCKw+fTk/PPn6+/BnarlK0s75ZLZVL1QXWXprofBp3qwwD4jR4hh/LMncKPTIK41G5NO/VXdScOx+CWyvutGIqrXNVTNzI1l1wp+klfUyuxJRm1/D2fxp3xS1FrFQouFNopNFjTtIWjbHDTAbnrtbJ4K8X9789gamJEO5TerrCneijode68jzu3XDuONirqcI9nOPR4EkCwV2t4xHWijs1q5Xr07CF3Yg7Teqb7glbtEzt6DW4UySB9LAarc0HoUoud7rm68U9QQFj6o8Q8sSd4oHkGAtaIfvDa3CnJZ7dZy/5klkFzh3bFlzkf724O+471qnG7N/AIvDEPRg0ivM9MGu0PPcxDxkTYovgWmzhpi2s/7npunFPFO8IvNqoHPnqvLQ+sC3HvVFNzLwGd4oR8ExS5JhHwxbMKudZKWvGPZG45a9vaqg3IX7kI+syL899IxiRiveXyVcFvVDGEKxhl9aPe+Lmus0XM/wY7Dch97zMvW+/GvdekLvh4z4t4MgNrd63Vtwd8j8Z+fZZgLvO7ntXZR64sTx3bLR1eZKc3V99wZ2CZPTu1hpyd/xJWs2wIvdYiTutwiybYHz2QhtEcbf5t/z/c597HkwD0UXNKC53KtUYaOvIvZigV9tcBuo7PfQlL4wnHtYN585jFK0n1HeK6DalwscGO5zL3XLj3deGe1GMhJ22/YaGuFN0qNS12UIMEBIT4E7P1LFRYvH2IFREfxW56+4jB+QrAW6Xu3LhPju8JtyLN5ff2PAA4x5cD5vCwHJ8AqJMA1nQhwxwxwRexUUcKSqCOyardZ7LoieI4QaQuLMViteIe+Kh0nhw+qrF4il7hVbAvitlWhAj1+1MlWmnSoO1GAFG3CVXh56A0ccdy+p80D33SQR3Gv1R9T1YY6l/QatymDASJnMXEfdrwh1frFJpqD+PPtPyzJXPQe4svl/VjcXGwqDPFAdHpn+DaSzWpDGM2axAVVSY7gjuyoiuqpGbLRYqXVMKrJa5s+GyteFOtgUf6KMPl59CuCs9NmPEV5OhZcj5CDFb8kUH89IVOem/uw5MFHela/sKN2aYy8Odv8piTbh/anifX23fhs7zKQPvg0Y2s+BVeQaPzPrCM2mnu2HDkdyVat5TOFts28e9k18n7sXT23ZDTGtXLm+j4jiqGYFY0+s8ACOE+7Rni7lY6YXQj3FXSvLCYnnuAHm5sztpTbjjWtizywao3Tj6FDYuRup3NZve1DarinPvfs+7+spmRi428nU9l9PrmZ7c2cK8/zDu039gBzG2PJ0vYB94AfpYdIw7kOcvN8bGgIP8sy7cMVjs7x/ffny8CYzA++LFOqN5dT6SBwymXvFkCzJujbyIvFm83xz1cZ/y1L9HVAG/pQJxeoGlsMO4x1pWcVzqahRzX41i7qtRzH01irmvRiePhwyL0OGY++sq/USJRbx39uljc/+LMtxHfXES9/dr9KJB2tw8Pz5nLx7cpzey1ZryYfn2XSpBmbAF8Z1/55R0oKThH2QSh/mTtZuk15puJ3eU5smBo92hsnvv/DvGdyufwJ+r1MFOOnEM+ZrJE0S6Ld8xYvv9OZRwoEyS9AbDky/K7sFBwkndUc6vnELhPUDiMH+yHLzA8Utq2+HO3x27i9cifeKgAfiH9Kp2rMNXu1dY4e8l7u52njpJ3sMLf4C7o2NMPcdXcSSlw/zJ2j0/BI6Hu/cB7sr5MXIfnrjvc5icTHYwl8Rd2i64nwxPwKQEuTtXLeauAPcvScSJ9X0yHA6/CO5fTpB7elvKfsxMj8Rd2n6/OwQ55Sk7cDUi6js7zJ8sB7GDwsEJ3FPw3rXUkHN3rgZwr0lvHYTXuuN3ibu0HV4dCW8pdLgr59s+7sdOY5q6UtzD/MlyEB8cA86gfXcaQH99xxxwOaLqu7Azzp/svpf7VbqGt0psZxRCfLKbUsK4X10h98mJqJpXqe3t7fvkroe7tN3DfXLSTPrszBW0tjF3hRCfJw/CuNegXoM/c07v2byaTE7S8Nxgzcl3L71HnG8filTkrqRTKR/3CbS2MXeFjDM6JNm0Y1dq0KEZKrVErbafRQuMbslhsrazm7xSavR6PEi8v4K8zJHh21lqjXFXDsnO0F1wCO1q+kRxD/MnqwlcgcuB44UcsA5NE/43cfsBov1SO9x3vrM0Jb2jpDErdyDZdkqFfhN7zThloN7xDu7sFCEOEytWrFixYsWKFStWrFixYsVSlP8AfRW8eMVKDSwAAAAASUVORK5CYII=" class="card-img"/>
+                      <h1 class="card-heading">Complete Healthcare Solutions</h1>
+                      <p class="card-paragraph">Fully integrated modular software architecture with seamless data flow between departments for effortless patient data management.</p>
+
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="shadow p-3 text-center mb-3 wcu-card">
+                      <img src="https://www.shutterstock.com/image-vector/shield-icon-protection-security-guard-260nw-2047085966.jpg" class="card-img"/>
+                      <h1 class="card-heading">Secure & Reliable</h1>
+                      <p class="card-paragraph">Robust security protocols and data privacy policy safeguards customer data, ensuring confidentiality without any data commercialization</p>
+
+                  </div>
+
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="comp-med-ser-background">
+          <div class="container">
+            <div class="row d-flex flex-row justify-content-center">
+              <div class="col-12">
+                  <h1 class="comp-med-ser-heading">Comprehensive Medical Services</h1>
+                  <p class="comp-med-ser-para">In our medical facility, we offer a comprehensive range of services to ensure the utmost care and convenience for our patients</p>
+              </div>
+              <div class="col-12 col-md-4 col-xl-3 m-2">
+                <div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="https://img.freepik.com/free-photo/high-angle-health-professional-drawing-blood_23-2149404714.jpg?t=st=1710139459~exp=1710143059~hmac=417d2f8901d4aaa37da1cdef003b1741c58a022f832108cfe7d99da307fc8080&w=740" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Blood Test</h4>
+                      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Know More
+                      </button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Blood Test</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="description">
+                                  To book a slot for a blood test, users must log in to our secure online platform. This login process ensures privacy and enables users to access personalized information and scheduling options. By logging in, users can provide essential details such as personal information, medical history, and insurance details, streamlining the booking process. Additionally, logging in allows users to view available appointment slots, select convenient times, and receive reminders for their upcoming appointments. Our login system prioritizes security, utilizing encryption protocols and authentication measures to safeguard sensitive information. Whether booking routine blood work or specialized tests, logging in ensures a seamless and efficient experience for users while maintaining the confidentiality of their health data.
+                                </p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-xl-3 m-2">
+                <div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="https://img.freepik.com/free-vector/medical-booking-app_23-2148554977.jpg?t=st=1710142410~exp=1710146010~hmac=99cf7b0ceafa74b383a7dc2226dce4692df4860fb11cb3459152025e02c4a1fe&w=740" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Slot Booking</h4>
+                      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#slotBookingModal">
+                        Know More
+                      </button>
+
+                        <div class="modal fade" id="slotBookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Slot Booking</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="description">
+                                  Slot booking for doctor appointments with patient login is an online system designed to streamline the process of scheduling medical consultations. Here's a description of how it typically works
+                                  <ul>
+                                    <li> Patients are required to register on the platform by providing necessary details like name, contact information, and possibly medical history. Upon registration, they create a login ID and password which they'll use for subsequent visits.</li>
+                                  </ul>
+                                </p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-xl-3 m-2">
+                <div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="https://img.freepik.com/premium-photo/blood-donation-picture_41050-1614.jpg?w=740" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Blood Bank</h4>
+                      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bloodBankModal">
+                        Know More
+                      </button>
+
+                        <div class="modal fade" id="bloodBankModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Blood Bank</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="description">
+                                  
+                                  A blood bank is a facility that collects, stores, and distributes blood and blood products to hospitals and medical facilities. These institutions play a crucial role in healthcare by ensuring an adequate and safe supply of blood for transfusions and various medical procedures. Blood banks are responsible for screening donors, testing donated blood for infectious diseases, processing blood into its various components (such as red blood cells, plasma, and platelets), and maintaining proper storage conditions to preserve the integrity of the blood products. Additionally, blood banks often conduct community outreach programs to raise awareness about the importance of blood donation and encourage voluntary blood donation. Overall, blood banks serve as lifelines in emergency situations and in the treatment of various medical conditions, 
+                                  saving countless lives every day.
+                                </p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-xl-3 m-2">
+                <div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="https://img.freepik.com/free-vector/set-young-doctor-with-patient-treatment-computer_24797-2788.jpg?t=st=1710147144~exp=1710150744~hmac=89246fd0a928d2a1386e790408c436c9504ac8e1e0b990ef64f821d26d8dc64b&w=740" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Test Reports</h4>
+                      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#testReportModal">
+                        Know More
+                      </button>
+
+                        <div class="modal fade" id="testReportModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Test Reports</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="description">
+                                  Based on your booked slots, 
+                                  the respective departments of the Phlebotomist,
+                                  take the samples of yor blood and conducts the Blood Test,
+                                  and the blood test reports has been 100% genuinely provided,
+                                  and all the  reports  have been uploaded in the Blood Test Reports In The Form Of Pdf Format
+                                </p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-background p-3">
+          <h3 class="contact-us-heading text-center">Contact Us</h3>
+          <div class="footer-inner-card d-flex flex-row justify-content-center">
+            <div class="icon-container">
+              <i class="fa-brands fa-facebook icon"></i>
+            </div>
+            <div class="icon-container">
+              <i class="fa-brands fa-instagram icon"></i>
+            </div>
+            <div class="icon-container">
+              <i class="fa-brands fa-google icon"></i>
+            </div>
+        </div>
+          
+        </div>
+
+
+          
+
+
+          
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
